@@ -7,12 +7,12 @@ terraform {
     }
 
   }
-  backend "azurerm"{
-        resource_group_name= "aks_rg"
-        storage_account_name= "aksstg12345"
-        container_name = "akscontainer"
-        key = "aks.terraform.tfstate"
-    }
+  backend "azurerm" {
+    resource_group_name  = "aks_rg"
+    storage_account_name = "aksstg12345"
+    container_name       = "akscontainer"
+    key                  = "aks.terraform.tfstate"
+  }
 }
 provider "azurerm" {
   features {}
